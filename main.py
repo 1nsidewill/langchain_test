@@ -23,6 +23,8 @@ from pathlib import Path
 import openai
 import uuid
 
+from pdftotext.pdftotext import process_file  # Import the functions from pdftotext.py
+
 # FastAPI 인스턴스 생성
 # Lifespan context manager for startup and shutdown events
 @asynccontextmanager
@@ -372,11 +374,60 @@ async def delete_collection(collection_name: str):
             return {"message": f"Collection '{collection_name}' does not exist."}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error deleting collection: {str(e)}")
+
+
+# PDF-to-Text endpoint for handling S3-triggered Lambda call
+@app.post("/process_s3_files/")
+async def process_s3_files(file_names: List[str], s3_bucket: str):
+    try:
+        processed_results = []
+
+        # Iterate over the list of file names passed from Lambda
+        for file_name in file_names:
+            # Simulating file download from S3
+            s3_file_path = f"/tmp/{file_name}"  # Path to temporarily store files
+            
+            # Download file from S3 (this should be done via boto3, or have Lambda pass the file URL)
+            # Use requests or boto3 to download the file from S3 to the temp path
+            # (assuming the file is already publicly accessible)
+            # You can uncomment and modify the below example:
+            # boto3.client('s3').download_file(Bucket=s3_bucket, Key=file_name, Filename=s3_file_path)
+
+            # Process the downloaded file to extract text
+            extracted_text = process_file(s3_file_path)
+
+            # Store result
+            processed_results.append({
+                "file_name": file_name,
+                "extracted_text": extracted_text
+            })
+            
+            # Remove temporary file
+            os.remove(s3_file_path)
+
+        return {"processed_files": processed_results}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error processing S3 files: {str(e)}")
+
+# File deletion endpoint (triggered by Lambda when a file is deleted from S3)
+@app.post("/delete_file/")
+async def delete_file(file_name: str, collection_name: str = "document_collection"):
+    try:
+        # Check if collection exists
+        if not has_collection(collection_name):
+            raise HTTPException(status_code=404, detail=f"Collection '{collection_name}' does not exist.")
+
+        # Delete file data from Milvus by file_id
+        collection = Collection(collection_name)
+        expr = f"file_id == '{file_name}'"
+        collection.delete(expr)
+
+        return {"message": f"File '{file_name}' deleted from collection '{collection_name}'."}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error deleting file: {str(e)}")
     
-    
-
-
-
 
 # FOR THE FUTURE USE
 # Setup the Milvus Hybrid Search Retriever
