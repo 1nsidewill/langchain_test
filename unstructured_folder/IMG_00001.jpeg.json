@@ -1,0 +1,2439 @@
+[
+  {
+    "type": "Title",
+    "element_id": "2c5a87406db6ce8fe117100d6891fabc",
+    "text": "E",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "7e938fdd983a74be56139beec308dc36",
+    "text": "Cs",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "8649e7598054073e1ab5cc5de3907744",
+    "text": "\ud559 \uad50 \uc0dd \ud65c \uc138 \ubd80 \uc0ac \ud56d \uae30 \ub85d \ubd80 ( \ud559 \uad50 \uc0dd \ud65c \uae30 \ub85d \ubd80 11)",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "7e938fdd983a74be56139beec308dc36",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "830214a11f8ced9014ef071c8f2b958c",
+    "text": "\uc878 \uc5c5 \ub300 \uc7a5 \ubc88 \ud638",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "40fddfa404f347466973fccca7a5bb00",
+    "text": "\u5e74 \u66f7",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "dfe11da0805a42b2877d789e9bb3abf4",
+    "text": "\ud559 \uacfc",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "673914c3f4639a87bef7807f93c193c2",
+    "text": "\ubc88 \ud638",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "6bac120ada8213ee79ce6a6b774461f4",
+    "text": "\ub2f4 \uc784 \uc131 \uba85",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "61cb61da276fbabb98206959cee856db",
+    "text": "\ud559 \ub144",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "956eabd282297b2ad4290b65a4eed856",
+    "text": "\u6cf0",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "0670902078f5e09724aa0fc098f7665f",
+    "text": "\uc870 \uc218 \uc9c4",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "5d6de8a111afd09a2e8f52d77a3ac472",
+    "text": "\uc7a5 \ud604 \uc9c4",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "cc6d01d7e70f3ac61cccf8f3d4769fc9",
+    "text": "\uc870 \uc219 \uc815",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "ad29b663dab983cf8ce982029d8af685",
+    "text": "\u8b70 \u7a7a",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "552c0b222441b01044ed976f8a3e410d",
+    "text": "1, \uc778 \uc801 \u318d \ud559 \uc801 \uc0ac \ud56d",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "d3295feae31ce84ec18580a3349f2517",
+    "text": "\uc131 \uba85 : \uac15 \uc5f0 \uc6b0",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "55bd0407415b10a0c007f0014692068f",
+    "text": "\uc131 \ubcc4 : \uc5ec",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "b9ca2f23d3c4efb2d70b912be8977676",
+    "text": "\uc8fc \ubbfc \ub4f1 \ub85d \ubc88 \ud638 : 051103\ufe63 \ufe69*\ufe69*%**",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "55bd0407415b10a0c007f0014692068f",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "af57ab553293a1ab6b8e4edfdea62884",
+    "text": "\ud559 \uc131 \uc815 \ubcf4",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "61dd89434f6fc45db1b98721a0067a8b",
+    "text": "\uc8fc \uc18c : \uc778 \ucc9c \uad11 \uc5ed \uc2dc \uc11c \uad6c \ubd09 \ud654 \ub85c 18, 107 \ub3d9 1003 \ud638 ( \uc655 \uae38 \ub3d9 , \ub4dc \ub9bc \ud30c \ud06c \uc5b4 \uc6b8 \ub9bc 1 \ub2e8 \uc9c0 )",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "af57ab553293a1ab6b8e4edfdea62884",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c504e1ba16d8a411e0dbb7882839ba4d",
+    "text": "081 \ub144 1\uc6d4 89 \uc77c \ub9c8 \uc804 \uc911 \ud559 \uad50 \uc81c 8 \ud559 \ub144 \uc878 \uc5c5",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "af57ab553293a1ab6b8e4edfdea62884",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "316268a1ad8ee59286626e5b12ebcf09",
+    "text": "\ud559 \uc801 \uc0ac \ud56d",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7b4365f6e223de610c01942f3cb03065",
+    "text": "3021 \ub144 3\uc6d4 5 \uc77c \ubc31 \uc11d \uace0 \ub4f1 \ud559 \uad50 \uc81c 1 \ud559 \ub144 \uc785 \ud559",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "316268a1ad8ee59286626e5b12ebcf09",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "73ef11a9ca29d4866b7d00ef25b37b03",
+    "text": "\ud2b9 \uae30 \uc0ac \ud56d",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "d1fba797a7931228e141809f5971f18a",
+    "text": "5 \u8ce2 \u7fd2 \u7af9 \u53e3",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "8e685baad24a90913d3601d82d5bb1e4",
+    "text": "\uacb0 \uc11d \uc77c \uc218",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "16b85ac96829982bb07ab1600ad75246",
+    "text": "\uc9c0 \uac01",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "56b26befdc96efee85fa8c233f1a6102",
+    "text": "\uc870 \ud1f4",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "2b7286cefa8c49d99cfaf2f101ad699d",
+    "text": "\uacb0 \uacfc",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "17e2880802aa0503bd75ae745e8ad2be",
+    "text": "\ud559 \ub144",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "83142d2827a4f1967d1dad7765f7088c",
+    "text": "\uc218 \uc5c5 \uc77c \uc218",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "b4027534379db43ec9079b13d6c0a2d3",
+    "text": "\ud2b9 \uae30 \uc0ac \ud56d",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "2c22340da743c2c3606eece2329c66fd",
+    "text": "\uc9c8 \ubcd1 | \ubbf8 \uc778 \uc815 | \uae30\ud0c0 | \uc9c8 \ubcd1 | \ubbf8 \uc778 \uc815 | \uae30\ud0c0 | \uc9c8 \ubcd1 | \ubbf8 \uc778 \uc815 | \uae30 \ud0c0",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "b4027534379db43ec9079b13d6c0a2d3",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "1c79b0f699f1ad2a457642d1f11000db",
+    "text": "\u547c \u53f2",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "c2f8f6859e2e08cea9cf09ced9fbfdad",
+    "text": "\ubbf8 \uc778 \uc815 | \uae30 \ud0c0",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "0cfbb1d6c5666776e3c84f9078e4e058",
+    "text": "192",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "c2f8f6859e2e08cea9cf09ced9fbfdad",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "c00a941ba6699ef827c41e700893a46b",
+    "text": "\uac1c \uadfc ,",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "c2f8f6859e2e08cea9cf09ced9fbfdad",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "dcf7e0b5dcce26412f7e8346bbc61243",
+    "text": "\ub2c8 \uaca9 \uc218 \uc5c5 \uc77c \uc218",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "de18bee682f60180b7358868b04b0203",
+    "text": "81 \uc77c",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "dcf7e0b5dcce26412f7e8346bbc61243",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "fc03c78509a12ff58f91c2423bdb0a95",
+    "text": "\uac1c \uadfc , \uc6d0 \uaca9 \uc218 \uc5c5 \uc77c \uc218 1",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "dcf7e0b5dcce26412f7e8346bbc61243",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "860b6cc1b2cb778d15ec66c9ee5b9315",
+    "text": "193",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "dcf7e0b5dcce26412f7e8346bbc61243",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "0c2bb3b68dec9e0d739f64b63cacc33e",
+    "text": "8 \uc77c",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "17a9e5a9b8addee5701392ed7c75bbc9",
+    "text": "108",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "0c2bb3b68dec9e0d739f64b63cacc33e",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "08a3298e1434998e094ed8cc02be386c",
+    "text": "\uc6d0 \uaca9 \uc218 \uc5c5 \uc77c \uc218 0 \uc77c",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "0c2bb3b68dec9e0d739f64b63cacc33e",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "5f60eb8cbe7698e5f859595daba7a318",
+    "text": "8. \uc218 \uc0c1 \uacbd \ub825",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "0c2bb3b68dec9e0d739f64b63cacc33e",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "039cd380bb791d08b4a4d727234867c9",
+    "text": "\ud559",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "276ffe5454a25c28bd8914b83ba423b4",
+    "text": "\ub144",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "0a3a2fb5253a47ea5a018bf05c5088d9",
+    "text": "\ub144",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "34f24a2b3295ce59881b97bbff50fb74",
+    "text": "\ucc38 \uac00 \ub300\uc0c1",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "3d46b50b20ea9e32fbaebbab06b69c31",
+    "text": "\uc218 \uc0c1 \uba85",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "e8109924807135017d1af87fb1970c8e",
+    "text": "\ub4f1 \uae09 ( \uc704 )",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "2c29fe03e9070c695678451a55279bf6",
+    "text": "\uc218 \uc0c1 \uc5f0 \uc6d4 \uc77c",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "48791a677632171a04f4d51065fec860",
+    "text": "\uc218 \uc5ec \uae30 \uad00",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "fe970fb5758050bd23c3b49d4a5fcceb",
+    "text": "( \ud559 \uae30 )",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "48791a677632171a04f4d51065fec860",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "15c5d6416b65e8a9a6f94c2c88e524c4",
+    "text": "( \ucc38 \uac00 \uc778 \uc6d0 )",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "979dcadcaa5f1aa737816a10df33e205",
+    "text": "1",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "15c5d6416b65e8a9a6f94c2c88e524c4",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "938f75b1d6fbcb124f51f0e9cc82021c",
+    "text": "1",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "15c5d6416b65e8a9a6f94c2c88e524c4",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "8e25285282f2d39f29af41932a66e43b",
+    "text": "1 \ud559 \ub144 \uc911 \ucc38 \uac00 \uc790 (",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "2e26239550dae3d99d85c4bc57b702fa",
+    "text": "\ub098 \uc758 \uc9c4 \ub85c \ub85c \ub4dc \ub9f5 \ub9cc \ub4e4 \uae30",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "dee632b418470dc8ccdad0812c246264",
+    "text": "\uc6b0 \uc218 \uc0c1 (9 \uc704 )",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "8845e5b2489c91ba399c69d6f267c59d",
+    "text": "3021 06\ufe5238\ufe52",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "dee632b418470dc8ccdad0812c246264",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "bdbb3ce9cacc82d6b69c30a221e7e0d5",
+    "text": "\ubc31 \uc11d \uace0 \ub4f1 \ud559 \uad50 \uc7a5",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "20059da5f61f20b1e971d1a4828b9c8c",
+    "text": "340 \uba85 )",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "bdbb3ce9cacc82d6b69c30a221e7e0d5",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "0bdb71869ece7296a90b40378b3235ca",
+    "text": "203238 \ub144 11 \uc6d4 30 \uc77c",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "bdbb3ce9cacc82d6b69c30a221e7e0d5",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "97e64680a104da8521cca951a913f48a",
+    "text": "1/19",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "bdbb3ce9cacc82d6b69c30a221e7e0d5",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "0cba64350364fe5f36c37742b65c3376",
+    "text": "\ubc88 \ud638",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "c1f2ac5b9b50ed6294b02423d433a4b0",
+    "text": "\uc774\ub984",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "ca24faa68639175505d9f920757eb317",
+    "text": "\u65fb 3 \u8a17",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "b73f2a86ad71ef81973d0d61709d4867",
+    "text": "\uac15\ubcd5\uc6b0",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "277a503dfe7aea4e60887c001bbe6322",
+    "text": "S",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "628118f3aa789cd1d53a3f95c80b5607",
+    "text": "2",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "277a503dfe7aea4e60887c001bbe6322",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "3055ea5df82c9de78d0adf0513d1671c",
+    "text": "S",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "20ee0936fc9007d9199781738afb21cd",
+    "text": "S",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "b1da01f025a978710e1f6556c1f0204e",
+    "text": "2",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "20ee0936fc9007d9199781738afb21cd",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "438dd20e23c8bfb1841239a6e98691d2",
+    "text": "2",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "20ee0936fc9007d9199781738afb21cd",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "be986e8db81f7047d0f30fdb9de77647",
+    "text": "S",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "cf98f499c8e7f8bd2063bb3208e97c3d",
+    "text": "5",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "be986e8db81f7047d0f30fdb9de77647",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "578f606ab9718375419f7e3d0a8de177",
+    "text": "9",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "be986e8db81f7047d0f30fdb9de77647",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "c78613919e1c959f45d206c1a7907ddc",
+    "text": "55",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "be986e8db81f7047d0f30fdb9de77647",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "a0d582de11e1f368d2bc62e2cebaf8c6",
+    "text": "\ube10\uc911\ub5b5\uc758 \uc704 \ubcc0 \uc870 \uc5ec \ubd80 ( \ubc1c \uae09 \uc77c \ub85c \ubd80 \ud130 \u91e6\u77bf",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "be986e8db81f7047d0f30fdb9de77647",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1d64c5a4c07b39f02e93e8979a20a25e",
+    "text": "\uc774 \ub0b4 ) \ubc0f \uad50 \uc721 \ubbfc \uc6d0 \uc74c \uc131 \uc11c \ube44 \uc2a4 \ud655 \uc778 \ubc29",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "be986e8db81f7047d0f30fdb9de77647",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "913fb880eda69c1566fbfa1ea28e1036",
+    "text": "\uad6d \ubbfc \uc11c \ube44 \uc2a4 (0018.80. \u3134 ) > \uad50 \uc721 \uc81c \uc99d \uba85 > \ubc1c \uae09 \ubb38 \uc11c \uc9c4 \uc704 \ud655 \uc778 \u300f \uc5d0",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "parent_id": "be986e8db81f7047d0f30fdb9de77647",
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "ced1a8088f6e8e7cd36ece677aea0917",
+    "text": "\uc548 \ub0b4 \ub418 \uc5b4 \uc788 \uc2b5 \ub2c8 \ub2e4 .",
+    "metadata": {
+      "filetype": "image/jpeg",
+      "languages": [
+        "kor"
+      ],
+      "page_number": 1,
+      "filename": "IMG_00001.jpeg",
+      "data_source": {
+        "url": null,
+        "version": null,
+        "record_locator": {
+          "path": "/home/will/langchain_test/input_folder/IMG_00001.jpeg"
+        },
+        "date_created": null,
+        "date_modified": "1728634095.6256888",
+        "date_processed": "1728634866.0559523",
+        "permissions_data": [
+          {
+            "mode": 33188
+          }
+        ],
+        "filesize_bytes": 514236
+      }
+    }
+  }
+]
