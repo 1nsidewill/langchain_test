@@ -102,6 +102,9 @@ tools = "^0.1.9"
 pymupdf = "^1.24.11"
 unstructured-ingest = "^0.0.24"
 localstack = "^3.8.1"
+pdfkit = "^1.0.0"
+langchain-redis = "^0.1.1"
+redis = "^5.2.0"
 
 
 [build-system]

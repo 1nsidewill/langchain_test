@@ -1,6 +1,6 @@
-from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi import FastAPI, File, UploadFile, HTTPException, Depends, Header
 from contextlib import asynccontextmanager
-from typing import List, Dict
+from typing import List, Dict, Optional
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -12,18 +12,31 @@ from langchain.vectorstores import Milvus
 from langchain.retrievers import EnsembleRetriever
 from langchain_community.retrievers import BM25Retriever
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import RunnablePassthrough, RunnableLambda
+from langchain_core.tracers import ConsoleCallbackHandler
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from pymilvus import connections, Collection, CollectionSchema, FieldSchema, DataType, has_collection, drop_collection, Index, WeightedRanker
 import os
 import zipfile
 import shutil
-from pathlib import Path
+from pathlib import Path 
 import openai
 import uuid
+from langsmith.wrappers import wrap_openai
+from langsmith import traceable
+from langchain_core.chat_history import BaseChatMessageHistory
+from langchain_core.messages import AIMessage, HumanMessage
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain_redis import RedisChatMessageHistory
+import redis
 
-from pdftotext.pdftotext import process_file  # Import the functions from pdftotext.py
+from langchain_core.globals import set_debug, set_verbose
+# set_debug(True)
+
+# Testing Session
+in_memory_sessions = {}  # Temporary in-memory session storage for testing
 
 # FastAPI 인스턴스 생성
 # Lifespan context manager for startup and shutdown events
@@ -45,10 +58,11 @@ load_dotenv()
 milvus_url = os.getenv("MILVUS_URL")
 openai_api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = openai_api_key
+REDIS_URL = os.getenv("REDIS_URL")
 
 # OpenAI
 llm = ChatOpenAI(openai_api_key=openai_api_key, model="gpt-4o")
-embedding = OpenAIEmbeddings(openai_api_key=openai_api_key)
+embedding = OpenAIEmbeddings(openai_api_key=openai_api_key, model="text-embedding-3-large")
 PROMPT_TEMPLATE = """
     Human: You are an AI assistant, and provides answers to questions by using fact based and statistical information when possible.
     Use the following pieces of information to provide a concise answer to the question enclosed in <question> tags.
@@ -72,7 +86,7 @@ connections.connect(host=milvus_url.split(":")[0], port=milvus_url.split(":")[1]
 print("Milvus에 성공적으로 연결되었습니다.")
 
 # Milvus 설정 (Collection과 Field 설정)
-DEFAULT_COLLECTION_NAME = "document_collection"
+DEFAULT_COLLECTION_NAME = "chat_korea_univ"
 collection = None  # Global variable to store the loaded collection
 
 # Milvus configuration defaults
@@ -144,7 +158,7 @@ def create_milvus_collection(request: CreateCollectionRequestModel):
             auto_id=True,
             max_length=100,
         ),
-        FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=1536),
+        FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=3072),
         FieldSchema(name=DEFAULT_TEXT_FIELD, dtype=DataType.VARCHAR, max_length=65535),
         FieldSchema(name=DEFAULT_FILE_ID_FIELD, dtype=DataType.VARCHAR, max_length=1000),
     ]
@@ -173,7 +187,7 @@ def query_all_documents(collection, batch_size=100):
         # Query the collection in batches
         query_results = collection.query(
             expr="",
-            output_fields=["text", "file_id"],  # Add more fields if needed
+            output_fields=["text", "file_name"],  # Add more fields if needed
             offset=offset,
             limit=batch_size
         )
@@ -283,20 +297,69 @@ Query Area
 # Define a query model for incoming queries with additional parameters
 class QueryModel(BaseModel):
     query: str
-    collection_name: str = Field(default="document_collection", description="The Milvus collection name to search in.")
+    collection_name: str = Field(default="chat_korea_univ", description="The Milvus collection name to search in.")
     search_type: str = Field(default="similarity", description="The type of search in Milvus (e.g., 'similarity', 'hybrid').")
     search_kwargs: Dict[str, int] = Field(default={"k": 5}, description="The search parameters for Milvus (e.g., {'k': 5}).")
     bm25_k: int = Field(default=5, description="The number of documents to retrieve using BM25 retriever.")
     ensemble_weights: List[float] = Field(default=[0.5, 0.5], description="The weights for EnsembleRetriever (e.g., [0.5, 0.5]).")
 
+# Dependency to create or retrieve a session ID
+def get_session_id(session_id: Optional[str] = Header(None)):
+    # Check if session_id is provided; if not, create a new one
+    if session_id is None:
+        session_id = str(uuid.uuid4())
+        in_memory_sessions[session_id] = {"created": True}
+    elif session_id not in in_memory_sessions:
+        raise HTTPException(status_code=400, detail="Invalid session ID")
+    return session_id
+
 def format_docs(docs):
     formatted_text = "\n\n".join(doc.page_content for doc in docs)
     return formatted_text
 
+# 사용자 정의 RedisChatMessageHistory 클래스에 만료 시간 추가
+class ExpiringRedisChatMessageHistory(RedisChatMessageHistory):
+    def __init__(self, session_id, redis_url, ttl=1800):
+        super().__init__(session_id=session_id, redis_url=redis_url)
+        self.ttl = ttl  # 만료 시간 설정
+
+    def add_user_message(self, message):
+        super().add_user_message(message)
+        self._set_expiry()
+
+    def add_ai_message(self, message):
+        super().add_ai_message(message)
+        self._set_expiry()
+
+    def _set_expiry(self):
+        # Redis에 저장된 세션 데이터에 만료 시간 설정
+        redis_client = redis.from_url(self.redis_url)
+        redis_client.expire(f"history:{self.session_id}", self.ttl)
+
+# 테스트 함수
+@app.get("/test_redis")
+def test_redis():
+    # 만료 시간 30분으로 설정한 RedisChatMessageHistory 객체 초기화
+    history = ExpiringRedisChatMessageHistory(session_id="user_123", redis_url=REDIS_URL, ttl=1800)
+
+    # 메시지 추가
+    history.add_user_message("Hello, AI assistant!")
+    history.add_ai_message("Hello! How can I assist you today?")
+
+    # 메시지 조회
+    print("Chat History:")
+    for message in history.messages:
+        print(f"{type(message).__name__}: {message.content}")
+        
 # Query Endpoint using Milvus Hybrid Search Retriever and LangChain RAG chain
 @app.post("/query/")
-async def query_langchain(query: QueryModel):
+async def query_langchain(query: QueryModel, session_id: str = Depends(get_session_id)):
     try:
+        # Getting History
+        history = ExpiringRedisChatMessageHistory(session_id=session_id, redis_url=REDIS_URL, ttl=1800)
+        # Add user message to Redis history
+        history.add_user_message(query.query)
+        
         # Setup retriever
         milvus_vector_store = Milvus(
             embedding,
@@ -317,15 +380,33 @@ async def query_langchain(query: QueryModel):
             weights=query.ensemble_weights  # Use weights from query parameters
         )
         
+        # Beautifier function to clean up and format retrieved documents
+        def beautify_docs(docs):
+            beautified = []
+            for doc in docs:
+                # Extract metadata and content
+                metadata = "\n".join([f"{k}: {v}" for k, v in doc.metadata.items()]) if doc.metadata else "No metadata"
+                content = doc.page_content[:500] + "..." if len(doc.page_content) > 500 else doc.page_content  # Truncate long content for readability
+                
+                # Format for readability
+                beautified.append(f"Metadata:\n{metadata}\n\nContent:\n{content}\n{'-'*50}")
+            return "\n".join(beautified)
+
+        # Define a logging step to print the retrieved documents
+        log_retrieved_docs = RunnableLambda(lambda x: (print("Retrieved Docs:", beautify_docs(x)), x)[1])
+
         # Define the RAG chain
         rag_chain = (
-            {"context": ensemble_retriever | format_docs, "question": RunnablePassthrough()}
+            {"context": ensemble_retriever
+            | log_retrieved_docs
+            | format_docs, "question": RunnablePassthrough()}
             | prompt
             | llm
             | StrOutputParser()
         )
         rag_chain.get_graph().print_ascii()
         answer = rag_chain.invoke(query.query)
+        rag_chain.max_tokens_limit = 
         
         return {"answer": answer}
     except Exception as e:
@@ -375,41 +456,6 @@ async def delete_collection(collection_name: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error deleting collection: {str(e)}")
 
-
-# PDF-to-Text endpoint for handling S3-triggered Lambda call
-@app.post("/process_s3_files/")
-async def process_s3_files(file_names: List[str], s3_bucket: str):
-    try:
-        processed_results = []
-
-        # Iterate over the list of file names passed from Lambda
-        for file_name in file_names:
-            # Simulating file download from S3
-            s3_file_path = f"/tmp/{file_name}"  # Path to temporarily store files
-            
-            # Download file from S3 (this should be done via boto3, or have Lambda pass the file URL)
-            # Use requests or boto3 to download the file from S3 to the temp path
-            # (assuming the file is already publicly accessible)
-            # You can uncomment and modify the below example:
-            # boto3.client('s3').download_file(Bucket=s3_bucket, Key=file_name, Filename=s3_file_path)
-
-            # Process the downloaded file to extract text
-            extracted_text = process_file(s3_file_path)
-
-            # Store result
-            processed_results.append({
-                "file_name": file_name,
-                "extracted_text": extracted_text
-            })
-            
-            # Remove temporary file
-            os.remove(s3_file_path)
-
-        return {"processed_files": processed_results}
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error processing S3 files: {str(e)}")
-
 # File deletion endpoint (triggered by Lambda when a file is deleted from S3)
 @app.post("/delete_file/")
 async def delete_file(file_name: str, collection_name: str = "document_collection"):
@@ -428,7 +474,6 @@ async def delete_file(file_name: str, collection_name: str = "document_collectio
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error deleting file: {str(e)}")
     
-
 # FOR THE FUTURE USE
 # Setup the Milvus Hybrid Search Retriever
 def setup_milvus_hybrid_retriever():
@@ -455,3 +500,4 @@ def setup_milvus_hybrid_retriever():
     )
     
     return retriever
+
