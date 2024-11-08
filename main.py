@@ -1,42 +1,52 @@
-from fastapi import FastAPI, File, UploadFile, HTTPException, Depends, Header
-from fastapi.responses import RedirectResponse
-from contextlib import asynccontextmanager
-from typing import List, Dict, Optional
-from pydantic import BaseModel, Field
-from dotenv import load_dotenv
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_milvus.retrievers import MilvusCollectionHybridSearchRetriever
-from langchain_milvus.utils.sparse import BM25SparseEmbedding
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Milvus
-from langchain_core.chat_history import BaseChatMessageHistory
-from langchain.retrievers import EnsembleRetriever
-from langchain_community.retrievers import BM25Retriever
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough, RunnableLambda
-from langchain_core.tracers import ConsoleCallbackHandler
-from langchain.prompts import PromptTemplate
-from langchain.chains import RetrievalQA
-from pymilvus import connections, Collection, CollectionSchema, FieldSchema, DataType, has_collection, drop_collection, Index, WeightedRanker
-import os
-import zipfile
-import shutil
-from pathlib import Path 
-import openai
-import uuid
-from langsmith.wrappers import wrap_openai
-from langsmith import traceable
-from langchain_core.chat_history import BaseChatMessageHistory
-from langchain_core.messages import AIMessage, HumanMessage
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain_community.chat_message_histories import RedisChatMessageHistory
-from langchain_community.chat_message_histories import ChatMessageHistory
-import redis
-from operator import itemgetter
-import json
+# FastAPI and related dependencies
+from fastapi import FastAPI, File, UploadFile, HTTPException, Depends, Header  # Core FastAPI functionality, HTTP exceptions, dependency injection, and header handling
+from fastapi.responses import RedirectResponse  # For HTTP redirection responses
+from contextlib import asynccontextmanager  # Context management for asynchronous operations
 
-from langchain_core.globals import set_debug, set_verbose
+# Type hinting and environment configuration
+from typing import List, Dict, Optional  # Type hints for lists, dictionaries, and optional values
+from pydantic import BaseModel, Field  # Pydantic models for data validation
+from dotenv import load_dotenv  # To load environment variables from a .env file
+
+# LangChain and OpenAI imports for embeddings and chat functionality
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI  # OpenAI embeddings and chat model integration
+from langchain.text_splitter import RecursiveCharacterTextSplitter  # For text splitting into manageable chunks
+
+# Milvus and LangChain Community Modules for advanced retrieval
+from langchain_community.vectorstores import Milvus  # Milvus vector store for embedding storage and retrieval
+from langchain_milvus.retrievers import MilvusCollectionHybridSearchRetriever  # Hybrid search for Milvus collections
+from langchain_milvus.utils.sparse import BM25SparseEmbedding  # Sparse embedding for BM25-based retrieval
+from langchain_community.retrievers import BM25Retriever  # BM25 retriever for improved document retrieval based on BM25
+
+# LangChain retrieval and core modules
+from langchain.retrievers import EnsembleRetriever  # Combines multiple retrieval strategies with customizable weights
+from langchain_core.output_parsers import StrOutputParser  # Parsing for output strings
+from langchain.prompts import PromptTemplate  # Prompt templates to structure chatbot prompts
+from langchain_core.runnables.history import RunnableWithMessageHistory  # Chat history for Runnable chains with message support
+
+# LangChain Core Globals for Debugging
+from langchain_core.globals import set_debug, set_verbose  # Settings for debugging and verbosity in LangChain
+
+# Milvus database connection and schema setup
+from pymilvus import connections, Collection, CollectionSchema, FieldSchema, DataType, has_collection, drop_collection, Index, WeightedRanker  
+# Connections: Handles Milvus connection setup
+# Collection: Represents Milvus collections
+# CollectionSchema, FieldSchema, DataType: For defining collection schemas
+# has_collection, drop_collection: Check and manage collections
+# Index, WeightedRanker: Indexing and ranking for Milvus data
+
+# Redis for storing chat history
+from langchain_community.chat_message_histories import RedisChatMessageHistory  # Manages chat message history storage in Redis
+import redis  # Core Redis library for connecting and interacting with Redis
+
+# Standard libraries and utility imports
+import os  # OS-level operations such as file handling
+import shutil  # High-level file operations (e.g., copying, moving)
+from pathlib import Path  # File path management
+import openai  # OpenAI API integration for model usage
+import uuid  # Generate unique session IDs
+from operator import itemgetter  # Utility for item retrieval by index
+
 # set_debug(True)
 
 # Testing Session
