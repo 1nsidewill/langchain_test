@@ -1,5 +1,5 @@
 # FastAPI and related dependencies
-from fastapi import FastAPI, File, UploadFile, HTTPException, Depends, Header  # Core FastAPI functionality, HTTP exceptions, dependency injection, and header handling
+from fastapi import FastAPI, HTTPException, Depends, Header  # Core FastAPI functionality, HTTP exceptions, dependency injection, and header handling
 from fastapi.responses import RedirectResponse  # For HTTP redirection responses
 from contextlib import asynccontextmanager  # Context management for asynchronous operations
 
@@ -10,12 +10,9 @@ from dotenv import load_dotenv  # To load environment variables from a .env file
 
 # LangChain and OpenAI imports for embeddings and chat functionality
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI  # OpenAI embeddings and chat model integration
-from langchain.text_splitter import RecursiveCharacterTextSplitter  # For text splitting into manageable chunks
 
 # Milvus and LangChain Community Modules for advanced retrieval
 from langchain_community.vectorstores import Milvus  # Milvus vector store for embedding storage and retrieval
-from langchain_milvus.retrievers import MilvusCollectionHybridSearchRetriever  # Hybrid search for Milvus collections
-from langchain_milvus.utils.sparse import BM25SparseEmbedding  # Sparse embedding for BM25-based retrieval
 from langchain_community.retrievers import BM25Retriever  # BM25 retriever for improved document retrieval based on BM25
 
 # LangChain retrieval and core modules
@@ -28,7 +25,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory  # Chat 
 from langchain_core.globals import set_debug, set_verbose  # Settings for debugging and verbosity in LangChain
 
 # Milvus database connection and schema setup
-from pymilvus import connections, Collection, CollectionSchema, FieldSchema, DataType, has_collection, drop_collection, Index, WeightedRanker  
+from pymilvus import connections, Collection, has_collection, drop_collection
 # Connections: Handles Milvus connection setup
 # Collection: Represents Milvus collections
 # CollectionSchema, FieldSchema, DataType: For defining collection schemas
@@ -41,8 +38,6 @@ import redis  # Core Redis library for connecting and interacting with Redis
 
 # Standard libraries and utility imports
 import os  # OS-level operations such as file handling
-import shutil  # High-level file operations (e.g., copying, moving)
-from pathlib import Path  # File path management
 import openai  # OpenAI API integration for model usage
 import uuid  # Generate unique session IDs
 from operator import itemgetter  # Utility for item retrieval by index
@@ -86,11 +81,6 @@ print("Milvus에 성공적으로 연결되었습니다.")
 DEFAULT_COLLECTION_NAME = "chat_korea_univ"
 collection = None  # Global variable to store the loaded collection
 
-# Milvus configuration defaults
-DEFAULT_PK_FIELD = "doc_id"
-DEFAULT_TEXT_FIELD = "text"
-DEFAULT_FILE_ID_FIELD = "file_id"
-
 @app.get("/", include_in_schema=False)
 async def root():
     return RedirectResponse(url="/docs")
@@ -114,71 +104,9 @@ def load_milvus_collection(request: LoadCollectionRequestModel = None):
     # If the collection doesn't exist, raise an error
     raise HTTPException(status_code=404, detail=f"Collection '{collection_name}' does not exist.")
 
-# Pydantic model for dense index settings
-# class DenseIndexModel(BaseModel):
-#     index_type: str = "IVF_FLAT"  # Default index type for Milvus
-#     metric_type: str = "L2"  # Default metric type for similarity search
-#     params: dict = {"nlist": 128}  # Default index parameters (nlist controls partitioning)
-
-#     class Config:
-#         json_schema_extra  = {
-#             "example": {
-#                 "index_type": "IVF_FLAT",
-#                 "metric_type": "L2",
-#                 "params": {"nlist": 128}
-#             },
-#             "description": {
-#                 "index_type": "Type of index to use for dense vector search. Default is 'IVF_FLAT'. Other options include 'FLAT'.",
-#                 "metric_type": "The metric type to use for similarity. Default is 'L2' (Euclidean distance).",
-#                 "params": "Additional parameters for the index. For example, 'nlist' controls the number of clusters in IVF-based indices."
-#             }
-#         }
-
-# Pydantic model for collection creation request
-class CreateCollectionRequestModel(BaseModel):
-    collection_name: str  # Collection name provided by the user
-    # dense_index: DenseIndexModel = DenseIndexModel()  # Dense index settings with default values
-
-# Function to create a new collection using the Pydantic model
-@app.post("/create_milvus_collection/")
-def create_milvus_collection(request: CreateCollectionRequestModel):
-    collection_name = request.collection_name
-    dense_index = request.dense_index
-
-    if has_collection(collection_name):
-        raise HTTPException(status_code=400, detail=f"Collection '{collection_name}' already exists.")
-    
-    print(f"Collection '{collection_name}' does not exist. Creating new collection.")
-    
-    # Define fields for the collection schema
-    fields = [
-        FieldSchema(
-            name=DEFAULT_PK_FIELD,
-            dtype=DataType.VARCHAR,
-            is_primary=True,
-            auto_id=True,
-            max_length=100,
-        ),
-        FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=3072),
-        FieldSchema(name=DEFAULT_TEXT_FIELD, dtype=DataType.VARCHAR, max_length=65535),
-        FieldSchema(name=DEFAULT_FILE_ID_FIELD, dtype=DataType.VARCHAR, max_length=1000),
-    ]
-    
-    schema = CollectionSchema(fields=fields, enable_dynamic_field=False)
-    collection = Collection(
-        name=collection_name, schema=schema, consistency_level="Strong"
-    )
-    
-    # Use provided dense index parameters
-    index_params = {
-        "index_type": dense_index.index_type,
-        "metric_type": dense_index.metric_type,
-        "params": dense_index.params
-    }
-    collection.create_index("vector", index_params)
-
-    print(f"Collection '{collection_name}' created successfully with index {dense_index.index_type}.")
-    return {"message": f"Collection '{collection_name}' created successfully with index {dense_index.index_type}."}
+"""
+Query Area
+"""
  
 def query_all_documents(collection, batch_size=100):
     offset = 0
@@ -204,96 +132,6 @@ def query_all_documents(collection, batch_size=100):
         offset += batch_size
 
     return all_texts 
-
-
-"""
-File Upload, Embedding and Insertion Area
-"""
-
-# Global list to store all texts for BM25 embedding
-corpus_list = []
-
-# Define the request model with chunk_size and chunk_overlap as parameters
-class FileUploadModel(BaseModel):
-    chunk_size: int = Field(default=1000, description="Size of each text chunk for splitting.")
-    chunk_overlap: int = Field(default=100, description="Overlap between chunks during text splitting.")
-    files: List[UploadFile] = Field(..., description="List of text files (.txt) or zip files containing text files to upload and process.")
-
-# Helper function to process a single file (txt) and store the split texts in the global list
-async def process_txt_file(file_path: Path, chunk_size: int, chunk_overlap: int):
-    # Try reading the file in UTF-8, fallback to a more generic encoding if an error occurs
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            text = f.read()
-    except UnicodeDecodeError:
-        # If utf-8 fails, try reading the file with a different encoding (latin-1)
-        try:
-            with open(file_path, "r", encoding="latin-1") as f:
-                text = f.read()
-        except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Error reading file: {str(e)}")
-
-    file_id = file_path.name  # Default file name without encoding transformations
-
-    # Split the text using chunk_size and chunk_overlap
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-    texts = text_splitter.split_text(text)
-
-    # Append tuples of (text, file_id) to the global corpus list
-    for t in texts:
-        corpus_list.append((t, file_id))  # Now storing both text and file_id
-
-# After processing all files, we generate embeddings for the entire corpus and insert them into Milvus
-def insert_texts_into_milvus(collection):
-    entities = []
-    corpus_list_with_only_texts = [t[0] for t in corpus_list]
-    
-    for text, file_id in corpus_list:
-        entity = {
-            "vector": OpenAIEmbeddings(openai_api_key=openai_api_key).embed_documents([text])[0],
-            "text": text,
-            "file_id": file_id  # Include file_id during insertion
-        }
-        entities.append(entity)
-
-    # Insert the entities into Milvus
-    collection.insert(entities)
-    collection.load()  # Load the updated collection
-
-# Endpoint to upload multiple files and process them with chunk parameters
-@app.post("/upload/")
-async def upload_files_or_zip(request: FileUploadModel):
-    try:
-        for file in request.files:
-            if file.filename.endswith(".txt"):
-                temp_file_path = f"/tmp/{file.filename}"
-                with open(temp_file_path, "wb") as temp_file:
-                    temp_file.write(await file.read())
-                await process_txt_file(Path(temp_file_path), request.chunk_size, request.chunk_overlap)
-            elif file.filename.endswith(".zip"):
-                temp_dir = Path("/tmp/uploaded_zip")
-                temp_dir.mkdir(parents=True, exist_ok=True)
-
-                zip_file_path = temp_dir / file.filename
-                with open(zip_file_path, "wb") as temp_zip:
-                    temp_zip.write(await file.read())
-
-                extracted_dir = temp_dir / file.filename.replace(".zip", "")
-                shutil.unpack_archive(str(zip_file_path), str(extracted_dir), "zip")
-
-                for txt_file in extracted_dir.glob("**/*.txt"):
-                    await process_txt_file(txt_file, request.chunk_size, request.chunk_overlap)
-
-        # Now, insert all split texts and their embeddings into Milvus, including file_id
-        insert_texts_into_milvus(collection)
-
-        return {"message": "Files uploaded and processed successfully into Milvus."}
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error processing files: {str(e)}")
-"""
-Query Area
-"""
 
 # Define a query model for incoming queries with additional parameters
 class QueryModel(BaseModel):
@@ -451,97 +289,3 @@ async def query_langchain(query: QueryModel, session_id: str = Depends(get_sessi
         return {"answer": response, "session_id": session_id}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error querying with Langchain: {str(e)}")
-"""
-DELETE Area
-"""
-
-@app.get("/test_redis")
-def test_redis(session_id):
-    history = RedisChatMessageHistory(session_id=session_id, url=REDIS_URL)
-    for message in history.messages:
-        print(f"{type(message).__name__}: {message.content}")
-
-# Define a model for deleting records by file_id from a specific collection
-class DeleteRecordModel(BaseModel):
-    collection_name: str
-    file_id: str
-
-# Endpoint to delete records from a specific collection based on file_id
-@app.delete("/delete_record/")
-async def delete_record(delete_model: DeleteRecordModel):
-    try:
-        # Check if the collection exists
-        if not has_collection(delete_model.collection_name):
-            raise HTTPException(status_code=404, detail=f"Collection '{delete_model.collection_name}' does not exist.")
-
-        # Load the collection
-        collection = Collection(delete_model.collection_name)
-
-        # Delete records where the file_id matches
-        expr = f"file_id == '{delete_model.file_id}'"
-        collection.delete(expr)
-
-        return {"message": f"Records with file_id '{delete_model.file_id}' have been successfully deleted from collection '{delete_model.collection_name}'."}
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error deleting records: {str(e)}")
-
-# Endpoint to delete an entire collection
-@app.delete("/delete_collection/")
-async def delete_collection(collection_name: str):
-    try:
-        # Check if the collection exists
-        if has_collection(collection_name):
-            # Drop the collection if it exists
-            drop_collection(collection_name)
-            return {"message": f"Collection '{collection_name}' has been successfully deleted."}
-        else:
-            return {"message": f"Collection '{collection_name}' does not exist."}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error deleting collection: {str(e)}")
-
-# File deletion endpoint (triggered by Lambda when a file is deleted from S3)
-@app.post("/delete_file/")
-async def delete_file(file_name: str, collection_name: str = "document_collection"):
-    try:
-        # Check if collection exists
-        if not has_collection(collection_name):
-            raise HTTPException(status_code=404, detail=f"Collection '{collection_name}' does not exist.")
-
-        # Delete file data from Milvus by file_id
-        collection = Collection(collection_name)
-        expr = f"file_id == '{file_name}'"
-        collection.delete(expr)
-
-        return {"message": f"File '{file_name}' deleted from collection '{collection_name}'."}
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error deleting file: {str(e)}")
-    
-# FOR THE FUTURE USE
-# Setup the Milvus Hybrid Search Retriever
-def setup_milvus_hybrid_retriever():
-    dense_embedding_func = OpenAIEmbeddings(openai_api_key=openai_api_key)
-    texts = query_all_documents(collection)
-    sparse_embedding_func = BM25SparseEmbedding(texts)
-    
-    # Milvus hybrid search retriever
-    sparse_search_params = {"metric_type": "IP"}
-    dense_search_params = {"metric_type": "IP", "params": {}}
-    
-    dense_field = "dense_vector"
-    sparse_field = "sparse_vector"
-    text_field = "text"
-    
-    retriever = MilvusCollectionHybridSearchRetriever(
-        collection=collection,
-        rerank=WeightedRanker(0.5, 0.5),
-        anns_fields=[dense_field, sparse_field],
-        field_embeddings=[dense_embedding_func, sparse_embedding_func],
-        field_search_params=[dense_search_params, sparse_search_params],
-        top_k=3,
-        text_field=text_field,
-    )
-    
-    return retriever
-
